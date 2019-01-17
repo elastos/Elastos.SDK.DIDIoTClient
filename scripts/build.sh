@@ -17,7 +17,6 @@ build_extfunc_depends()
 	"$DEPENDS_DIR/build-curl.sh" $@;
 
 	"$DEPENDS_DIR/build-Elastos.ORG.Wallet.Lib.C.sh" $@;
-	
 }
 
 export CFG_PROJECT_NAME="Elastos.SDK.DID.IOT";
