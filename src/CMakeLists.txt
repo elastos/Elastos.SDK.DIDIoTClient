@@ -17,7 +17,7 @@ message(STATUS "Elastos.ORG.Wallet.Lib.C include path: ${pkg-Elastos.ORG.Wallet.
 message(STATUS "Elastos.ORG.Wallet.Lib.C library path: ${pkg-Elastos.ORG.Wallet.Lib.C_STATIC_LDFLAGS}")
 
 file( GLOB Elastos.SDK.DID.IOT-SOURCES "*.cpp" )
-file( GLOB Elastos.SDK.DID.IOT-HEADERS "*.h" )
+file( GLOB Elastos.SDK.DID.IOT-HEADERS "*.hpp" )
 add_library(Elastos.SDK.DID.IOT ${Elastos.SDK.DID.IOT-SOURCES})
 target_include_directories(Elastos.SDK.DID.IOT PRIVATE "${pkg-Elastos.ORG.Wallet.Lib.C_INCLUDE_DIRS}")
 target_include_directories(Elastos.SDK.DID.IOT PRIVATE "${pkg-openssl_INCLUDE_DIRS}")
