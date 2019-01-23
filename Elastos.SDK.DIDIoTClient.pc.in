@@ -5,11 +5,11 @@ exec_prefix=${prefix}/bin
 libdir=${prefix}/lib
 includedir=${prefix}/include
 
-Name: Elastos.SDK.DID.IOT
-Description: Elastos.SDK.DID.IOT
+Name: Elastos.SDK.DIDIoTClient
+Description: Elastos.SDK.DIDIoTClient
 Version: @PACKAGE_VERSION@
 
 Requires:
-Libs: -L${libdir} -lElastos.SDK.DID.IOT
+Libs: -L${libdir} -lElastos.SDK.DIDIoTClient
 Libs.private: ${libdir}
-Cflags: -I${includedir}/Elastos.SDK.DID.IOT
+Cflags: -I${includedir}/Elastos.SDK.DIDIoTClient

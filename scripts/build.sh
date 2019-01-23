@@ -19,7 +19,7 @@ build_extfunc_depends()
 	"$DEPENDS_DIR/build-Elastos.ORG.Wallet.Lib.C.sh" $@;
 }
 
-export CFG_PROJECT_NAME="Elastos.SDK.DID.IOT";
+export CFG_PROJECT_NAME="Elastos.SDK.DIDIoTClient";
 export CFG_PROJECT_DIR="$PROJECT_DIR";
 source "$DEPENDS_DIR/build.sh" $@;
 

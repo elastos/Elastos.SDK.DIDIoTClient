@@ -13,5 +13,5 @@ build_extfunc()
 	"$BUILD_SH" $@;
 }
 export CFG_PROJECT_DIR="$PROJECT_DIR";
-export CFG_PROJECT_NAME="Elastos.SDK.DID.IOT";
+export CFG_PROJECT_NAME="Elastos.SDK.DIDIoTClient";
 source "$DEPENDS_DIR/package-mobile.sh" $@;

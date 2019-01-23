@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 
-#include "Elastos.SDK.DID.IOT.Api.hpp"
+#include "Elastos.SDK.DIDIoTClient.hpp"
 #include "common/Log.hpp"
 
 static constexpr const char* TAG = "DidApiTest";

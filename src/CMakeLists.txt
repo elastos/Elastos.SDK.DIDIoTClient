@@ -16,22 +16,22 @@ pkg_search_module(pkg-Elastos.ORG.Wallet.Lib.C REQUIRED Elastos.ORG.Wallet.Lib.C
 message(STATUS "Elastos.ORG.Wallet.Lib.C include path: ${pkg-Elastos.ORG.Wallet.Lib.C_INCLUDE_DIRS}")
 message(STATUS "Elastos.ORG.Wallet.Lib.C library path: ${pkg-Elastos.ORG.Wallet.Lib.C_STATIC_LDFLAGS}")
 
-file( GLOB Elastos.SDK.DID.IOT-SOURCES "*.cpp" )
-file( GLOB Elastos.SDK.DID.IOT-HEADERS "*.hpp" )
-add_library(Elastos.SDK.DID.IOT ${Elastos.SDK.DID.IOT-SOURCES})
-target_include_directories(Elastos.SDK.DID.IOT PRIVATE "${pkg-Elastos.ORG.Wallet.Lib.C_INCLUDE_DIRS}")
-target_include_directories(Elastos.SDK.DID.IOT PRIVATE "${pkg-openssl_INCLUDE_DIRS}")
-target_link_libraries(Elastos.SDK.DID.IOT ${pkg-Elastos.ORG.Wallet.Lib.C_STATIC_LDFLAGS})
-target_link_libraries(Elastos.SDK.DID.IOT ${pkg-openssl_STATIC_LDFLAGS})
-target_link_libraries(Elastos.SDK.DID.IOT common httpclient)
-set_target_properties(Elastos.SDK.DID.IOT PROPERTIES PUBLIC_HEADER "${Elastos.SDK.DID.IOT-HEADERS}")
-install(TARGETS Elastos.SDK.DID.IOT
+file( GLOB Elastos.SDK.DIDIoTClient-SOURCES "*.cpp" )
+file( GLOB Elastos.SDK.DIDIoTClient-HEADERS "*.hpp" )
+add_library(Elastos.SDK.DIDIoTClient ${Elastos.SDK.DIDIoTClient-SOURCES})
+target_include_directories(Elastos.SDK.DIDIoTClient PRIVATE "${pkg-Elastos.ORG.Wallet.Lib.C_INCLUDE_DIRS}")
+target_include_directories(Elastos.SDK.DIDIoTClient PRIVATE "${pkg-openssl_INCLUDE_DIRS}")
+target_link_libraries(Elastos.SDK.DIDIoTClient ${pkg-Elastos.ORG.Wallet.Lib.C_STATIC_LDFLAGS})
+target_link_libraries(Elastos.SDK.DIDIoTClient ${pkg-openssl_STATIC_LDFLAGS})
+target_link_libraries(Elastos.SDK.DIDIoTClient common httpclient)
+set_target_properties(Elastos.SDK.DIDIoTClient PROPERTIES PUBLIC_HEADER "${Elastos.SDK.DIDIoTClient-HEADERS}")
+install(TARGETS Elastos.SDK.DIDIoTClient
 		RUNTIME DESTINATION bin
 		LIBRARY DESTINATION lib
 		ARCHIVE DESTINATION lib
-		PUBLIC_HEADER DESTINATION include/Elastos.SDK.DID.IOT)
+		PUBLIC_HEADER DESTINATION include/Elastos.SDK.DIDIoTClient)
 
 if(DEFINED CFG_WITH_TEST)
 	add_executable(DidApiTest test/DidApiTest.cpp)
-	target_link_libraries(DidApiTest Elastos.SDK.DID.IOT)
+	target_link_libraries(DidApiTest Elastos.SDK.DIDIoTClient)
 endif()

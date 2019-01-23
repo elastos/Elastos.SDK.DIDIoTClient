@@ -1,5 +1,5 @@
-#ifndef _ELASTOS_SDK_DID_IOT_API_HPP_
-#define _ELASTOS_SDK_DID_IOT_API_HPP_
+#ifndef _ELASTOS_SDK_DID_IOTCLIENT_HPP_
+#define _ELASTOS_SDK_DID_IOTCLIENT_HPP_
 
 #include <map>
 #include <string>
@@ -87,6 +87,6 @@ class ElastosSdkDidIotApi {
 
 } // namespace elastos
 
-#endif /* _ELASTOS_SDK_DID_IOT_API_HPP_ */
+#endif /* _ELASTOS_SDK_DID_IOTCLIENT_HPP_ */
 
 
